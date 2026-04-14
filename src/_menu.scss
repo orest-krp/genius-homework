@@ -1,0 +1,80 @@
+@use "./base" as *;
+@use "./fonts" as *;
+
+%menu {
+    display: flex;
+    gap: 5.6rem;
+
+    @media (max-width: $screen-lg) {
+        gap: 2.4rem;
+    }
+}
+
+%menu-item {
+    &::after {
+        display: block;
+        content: attr(data-value);
+        font-weight: bold;
+        height: 1px;
+        color: transparent;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+%mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+%mobile-menu-item {
+    @extend %menu-item;
+    font-weight: $weight-regular;
+    color: $color-text;
+    list-style: none;
+}
+
+%mobile-menu-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+
+    &:hover {
+        color: $color-primary;
+        font-weight: $weight-bold;
+    }
+}
+
+.menu {
+    @extend %menu;
+
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+}
+
+.menu-item {
+    @extend %menu-item;
+}
+
+.menu-link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+.mobile-menu {
+    @extend %mobile-menu;
+}
+
+.mobile-menu-item {
+    @extend %mobile-menu-item;
+}
+
+.mobile-menu-link {
+    @extend %mobile-menu-link;
+}

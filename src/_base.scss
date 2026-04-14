@@ -1,0 +1,33 @@
+@use "./fonts" as *;
+
+$color-primary: #2B7FFF;
+$color-text: #011C44;
+$color-text-secondary: #747272;
+$color-white: #ffffff;
+$color-white-transparent: rgba(255, 255, 255, 0.25);
+
+$font-size-base: 62.5%;
+
+$screen-md: 768px;
+$screen-lg: 1240px;
+$screen-sm: 480px;
+
+html {
+    font-family: $font-roboto;
+    font-weight: $weight-regular;
+    font-size: $font-size-base;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-play;
+    font-weight: $weight-bold;
+}

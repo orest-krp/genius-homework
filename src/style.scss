@@ -1,0 +1,10 @@
+@use "./reset";
+@use "./base" as *;
+@use "./layout";
+@use "./socials";
+@use "./header";
+@use "./menu";
+
+body {
+    background-color: red;
+}

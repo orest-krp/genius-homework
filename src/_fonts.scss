@@ -1,0 +1,29 @@
+$font-play: 'Play', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+$weight-regular: 400;
+$weight-bold: 700;
+$weight-semibold: 600;
+
+$font-path: '/src/assets/fonts';
+
+@font-face {
+    font-family: 'Play';
+    font-weight: $weight-regular;
+    src: url('#{$font-path}/play-regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Play';
+    font-weight: $weight-bold;
+    src: url('#{$font-path}/play-bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100 900;
+    src: url('#{$font-path}/roboto-variable.ttf') format('truetype');
+    font-display: swap;
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>beauty-zone</title>
+  <link rel="stylesheet" href="/src/style.scss" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a href="#" class="header__logo" lang="en">Beauty<br />Zone</a>
+        <ul class="header__menu menu">
+          <li class="header__menu-item menu-item" data-value="Про нас">
+            <a href="#" class="header__menu-link menu-link">Про нас</a>
+          </li>
+          <li class="header__menu-item menu-item" data-value="Чому ми">
+            <a href="#" class="header__menu-link menu-link">Чому ми</a>
+          </li>
+          <li class="header__menu-item menu-item" data-value="Наші процедури">
+            <a href="#" class="header__menu-link menu-link">Наші процедури</a>
+          </li>
+          <li class="header__menu-item menu-item" data-value="Контакти">
+            <a href="#" class="header__menu-link menu-link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="header__socials socials">
+          <li class="header__socials__item socials-item">
+            <a href="#" class="header__socials__link socials-link" aria-label="Телефон">
+              <svg class="header__socials__icon socials-icon">
+                <use href="src/assets/img/icons/socials.svg#telephone"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__socials__item socials-item">
+            <a href="#" class="header__socials__link socials-link" aria-label="Інстаграм">
+              <svg class="header__socials__icon socials-icon">
+                <use href="src/assets/img/icons/socials.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__socials__item socials-item">
+            <a href="#" class="header__socials__link socials-link" aria-label="Фейсбук">
+              <svg class="header__socials__icon socials-icon">
+                <use href="src/assets/img/icons/socials.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <button class="header__burger burger">
+          <span class="header__burger-line burger-line"></span>
+          <span class="header__burger-line burger-line"></span>
+          <span class="header__burger-line burger-line"></span>
+        </button>
+      </nav>
+    </div>
+    <div class="header__mobile-overlay"></div>
+    <div class="header__mobile">
+      <nav class="header__mobile__nav">
+        <ul class="header__mobile__menu mobile-menu">
+          <li class="header__mobile__menu-item mobile-menu-item" data-value="Про нас">
+            <a href="#" class="header__mobile__menu-link mobile-menu-link">Про нас</a>
+          </li>
+          <li class="header__mobile__menu-item mobile-menu-item" data-value="Чому ми">
+            <a href="#" class="header__mobile__menu-link mobile-menu-link">Чому ми</a>
+          </li>
+          <li class="header__mobile__menu-item mobile-menu-item" data-value="Наші процедури">
+            <a href="#" class="header__mobile__menu-link mobile-menu-link">Наші процедури</a>
+          </li>
+          <li class="header__mobile__menu-item mobile-menu-item" data-value="Контакти">
+            <a href="#" class="header__mobile__menu-link mobile-menu-link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="header__mobile__socials mobile-socials">
+          <li class="header__mobile__socials__item mobile-socials-item">
+            <a href="#" class="header__mobile__socials__link mobile-socials-link" aria-label="Телефон">
+              <svg class="header__mobile__socials__icon mobile-socials-icon">
+                <use href="src/assets/img/icons/socials.svg#telephone"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__mobile__socials__item mobile-socials-item">
+            <a href="#" class="header__mobile__socials__link mobile-socials-link" aria-label="Instagram">
+              <svg class="header__mobile__socials__icon mobile-socials-icon">
+                <use href="src/assets/img/icons/socials.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__mobile__socials__item mobile-socials-item">
+            <a href="#" class="header__mobile__socials__link mobile-socials-link" aria-label="Фейсбук">
+              <svg class="header__mobile__socials__icon mobile-socials-icon">
+                <use href="src/assets/img/icons/socials.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="hero__subtitle">Косметологічна клініка</p>
+        <h1 class="hero__title">Beauty Zone</h1>
+        <div class="hero__action">
+          <button class="hero__action-button">Замовити дзвінок</button>
+          <p class="hero__action-text">Запишись та отримай безкоштовну консультацію нашого косметолога</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/src/mobile-menu.js"></script>
+</body>
+
+</html>
