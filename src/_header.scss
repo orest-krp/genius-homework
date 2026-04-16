@@ -5,31 +5,46 @@
 @use "./menu" as *;
 
 .header {
+    padding: 3.2rem 0;
+    position: absolute;
+    z-index: 1;
+
+    backdrop-filter: blur(4px);
     background: $color-white-transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
 
     @media (max-width: $screen-md) {
         background: none;
+        backdrop-filter: none;
+        padding: 1.6rem 0;
+
     }
 
     &__container {
-        @extend .container;
-
         position: relative;
         z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 3.2rem;
-        padding-bottom: 3.2rem;
+
+
     }
 
     &__logo {
-
         color: $color-primary;
         font-size: 2.2rem;
+        line-height: 2.1rem;
         font-family: $font-play;
         font-weight: $weight-bold;
-        line-height: 2.1rem;
+
+
+        @media (max-width: $screen-md) {
+            font-size: 1.6rem;
+            line-height: 1.5rem;
+        }
+
     }
 
     &__nav {
@@ -37,6 +52,28 @@
         justify-content: space-between;
         min-width: 100%;
         align-items: center;
+    }
+
+    &__menu {
+        gap: 5.6rem;
+
+        @media (max-width: $screen-lg) {
+            gap: 2.4rem;
+        }
+
+        @media (max-width: $screen-md) {
+            display: none;
+        }
+    }
+
+    &__socials {
+        @media (max-width: $screen-lg) {
+            gap: 2.4rem;
+        }
+
+        @media (max-width: $screen-md) {
+            display: none;
+        }
     }
 
     &__burger {
@@ -48,20 +85,22 @@
         height: 1.4rem;
         background: none;
         border: none;
-        cursor: pointer;
-        padding: 0;
 
         @media (max-width: $screen-md) {
             display: flex;
         }
 
         &--active {
+            width: 1.2rem;
+            height: 1.2rem;
+
             .header__burger-line {
                 background: $color-text;
 
+
                 &:nth-child(1) {
                     width: 100%;
-                    transform: rotate(45deg) translate(4px, 3px);
+                    transform: rotate(45deg) translate(3px, 4px);
                 }
 
                 &:nth-child(2) {
@@ -71,7 +110,7 @@
 
                 &:nth-child(3) {
                     width: 100%;
-                    transform: rotate(-45deg) translate(5px, -5px);
+                    transform: rotate(-45deg) translate(3px, -4px);
                 }
             }
         }
@@ -81,8 +120,7 @@
         display: block;
         height: 2px;
         background: $color-white;
-        transition: all 0.3s ease;
-        transform-origin: center;
+        transition: transform 0.3s ease;
 
         &:nth-child(1) {
             width: 75%;
@@ -135,12 +173,14 @@
             flex-direction: column;
         }
 
-        .mobile-menu {
-            margin-top: 3.2rem;
+        &__menu {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
+        &__socials {
+            margin-top: 1.6rem;
+            gap: 1.6rem;
         }
     }
-}
-
-.body--no-scroll {
-    overflow: hidden;
 }

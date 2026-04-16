@@ -1,0 +1,113 @@
+@use "./base" as *;
+@use "./fonts" as *;
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url("./assets/img/hero.png") no-repeat right center;
+        background-size: cover;
+
+        mask-image: url("./assets/img/hero-cut.svg");
+        mask-repeat: no-repeat;
+        mask-position: center bottom;
+        mask-size: cover;
+
+
+        @media (max-width: $screen-md) {
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 0;
+        padding-left: 12.6rem;
+        padding-top: 10.6rem;
+        padding-bottom: 20.6rem;
+
+        @media (max-width: $screen-md) {
+            padding-top: 6.2rem;
+            padding-left: 2rem;
+            padding-bottom: 12.6rem;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 1.6rem;
+
+        @media (max-width: $screen-md) {
+            font-size: 1.2rem;
+            text-align: center;
+
+        }
+    }
+
+    &__title {
+        font-family: $font-play;
+        font-size: 14rem;
+        color: $color-primary;
+        line-height: 11.4rem;
+        text-transform: capitalize;
+        max-width: 53rem;
+
+        @media (max-width: $screen-md) {
+            text-align: center;
+            font-family: Play;
+            max-width: none;
+            font-size: 5.4rem;
+            line-height: 4.6rem;
+        }
+
+    }
+
+    &__action {
+        width: 100%;
+        max-width: 24rem;
+
+        @media (max-width: $screen-md) {
+            margin: 0 auto;
+        }
+    }
+
+    &__action-button {
+        width: 100%;
+        margin-top: 4rem;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1.6rem 3.2rem;
+        border-radius: 3.2rem;
+        font-weight: $weight-semibold;
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: $screen-md) {
+            padding: 1.6rem 2.4rem;
+            margin-top: 3.2rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    &__action-text {
+        margin-top: 1.6rem;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: $color-text-secondary-hero;
+
+        @media (max-width: $screen-md) {
+            font-size: 1.1rem;
+        }
+    }
+}

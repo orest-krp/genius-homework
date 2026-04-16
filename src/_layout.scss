@@ -3,8 +3,5 @@
 .container {
     max-width: $screen-lg;
     margin: 0 auto;
-
-    @media (max-width: $screen-lg) {
-        padding: 0 2rem;
-    }
+    padding: 0 2rem;
 }

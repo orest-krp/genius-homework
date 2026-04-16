@@ -2,7 +2,8 @@
 
 $color-primary: #2B7FFF;
 $color-text: #011C44;
-$color-text-secondary: #747272;
+$color-text-secondary-footer: #747272;
+$color-text-secondary-hero: #4a4a4a;
 $color-white: #ffffff;
 $color-white-transparent: rgba(255, 255, 255, 0.25);
 
@@ -30,4 +31,8 @@ h5,
 h6 {
     font-family: $font-play;
     font-weight: $weight-bold;
+}
+
+.body--no-scroll {
+    overflow: hidden;
 }

@@ -1,139 +1,26 @@
 @use "./base" as *;
 
-%socials {
+.socials {
     display: flex;
     gap: 3.2rem;
 }
 
-%socials-item {
+.socials-item {
     width: 3.2rem;
     height: auto;
 }
 
-%socials-link {
+.socials-link {
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-%socials-icon {
-    width: 100%;
-    height: 100%;
-    max-width: 3.2rem;
-    max-height: 3.2rem;
-    fill: $color-text;
-    transition: fill 0.3s ease;
-}
-
-%socials-hover {
     &:hover {
         stroke: $color-primary;
     }
 }
 
-.socials {
-    @extend %socials;
-
-    @media (max-width: $screen-lg) {
-        gap: 2.4rem;
-    }
-
-    @media (max-width: $screen-md) {
-        display: none;
-    }
-}
-
-.socials-item {
-    @extend %socials-item;
-}
-
-.socials-link {
-    @extend %socials-link;
-    @extend %socials-hover;
-}
-
 .socials-icon {
-    @extend %socials-icon;
-}
-
-.mobile-socials {
-    @extend %socials;
-    gap: 1.6rem;
-    margin-top: 1.6rem;
-}
-
-.mobile-socials-item {
-    @extend %socials-item;
-    width: 3.2rem;
-    height: 3.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-socials-link {
-    @extend %socials-link;
-    @extend %socials-hover;
-}
-
-.mobile-socials-icon {
-    @extend %socials-icon;
-}
-
-.burger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
-    width: 2rem;
-    height: 1.4rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-
-    @media (max-width: $screen-md) {
-        display: flex;
-    }
-
-    &--active {
-        .burger-line {
-            background: $color-text;
-
-            &:nth-child(1) {
-                width: 100%;
-                transform: rotate(45deg) translate(4px, 3px);
-            }
-
-            &:nth-child(2) {
-                width: 100%;
-                opacity: 0;
-            }
-
-            &:nth-child(3) {
-                width: 100%;
-                transform: rotate(-45deg) translate(5px, -5px);
-            }
-        }
-    }
-}
-
-.burger-line {
-    display: block;
-    height: 2px;
-    background: $color-white;
-    transition: all 0.3s ease;
-    transform-origin: center;
-
-    &:nth-child(1) {
-        width: 75%;
-    }
-
-    &:nth-child(2) {
-        width: 100%;
-    }
-
-    &:nth-child(3) {
-        width: 50%;
-    }
+    max-width: 3.2rem;
+    max-height: 3.2rem;
 }
