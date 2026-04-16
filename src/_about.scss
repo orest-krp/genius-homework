@@ -1,0 +1,135 @@
+@use "./base" as *;
+
+.about {
+    margin-top: -3rem;
+
+    &__container {
+        display: flex;
+    }
+
+    &__content {
+        max-width: 71rem;
+        padding-bottom: 18rem;
+        position: relative;
+
+        @media (max-width: $screen-lg) {
+            max-width: 100%;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @media (max-width: $screen-md) {
+            font-size: 3.2rem;
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        line-height: 3.8rem;
+
+        @media (max-width: $screen-md) {
+            line-height: 100%;
+        }
+    }
+
+    &__text+&__text {
+        margin-top: 4rem;
+
+        @media (max-width: $screen-md) {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__gallery {
+        width: 100%;
+        position: relative;
+    }
+
+    &__gallery {
+        width: 100%;
+        position: relative;
+
+        @media (max-width: $screen-lg) {
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 32.7rem;
+        border-radius: 50%;
+        position: absolute;
+
+        &:nth-child(1) {
+            left: 0;
+            top: -4rem;
+        }
+
+        &:nth-child(2) {
+            right: 0;
+            top: 32rem;
+        }
+    }
+
+    &__gallery-stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &__star {
+            position: absolute;
+
+            &:nth-child(1) {
+                width: 6.4rem;
+                height: 6.4rem;
+                color: $color-text;
+                left: 10rem;
+                top: 30rem;
+            }
+
+            &:nth-child(2) {
+                width: 4rem;
+                height: 4rem;
+                color: $color-primary;
+                right: 0;
+                top: 0;
+            }
+
+            &:nth-child(3) {
+                width: 1.6rem;
+                height: 1.6rem;
+                color: $color-text-secondary;
+                right: 2rem;
+                top: 24rem;
+            }
+        }
+    }
+
+
+    &__content-stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        &__star {
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            color: $color-text;
+            right: 2rem;
+            bottom: -2rem;
+        }
+
+        @media (max-width: $screen-lg) {
+            display: block;
+        }
+    }
+}

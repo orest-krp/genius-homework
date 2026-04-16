@@ -10,10 +10,10 @@
         position: absolute;
         inset: 0;
 
-        background: url("./assets/img/hero.png") no-repeat right center;
+        background: url("/src/assets/img/hero.png") no-repeat right center;
         background-size: cover;
 
-        mask-image: url("./assets/img/hero-cut.svg");
+        mask-image: url("/src/assets/img/hero-cut.svg");
         mask-repeat: no-repeat;
         mask-position: center bottom;
         mask-size: cover;
@@ -35,7 +35,7 @@
         @media (max-width: $screen-md) {
             padding-top: 6.2rem;
             padding-left: 2rem;
-            padding-bottom: 12.6rem;
+            padding-bottom: 9rem;
         }
     }
 
