@@ -32,21 +32,6 @@
 
     }
 
-    &__logo {
-        color: $color-primary;
-        font-size: 2.2rem;
-        line-height: 2.1rem;
-        font-family: $font-play;
-        font-weight: $weight-bold;
-
-
-        @media (max-width: $screen-md) {
-            font-size: 1.6rem;
-            line-height: 1.5rem;
-        }
-
-    }
-
     &__nav {
         display: flex;
         justify-content: space-between;
