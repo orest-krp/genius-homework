@@ -4,14 +4,18 @@
     margin-top: 20rem;
     position: relative;
 
+    &__container {
+        max-width: 106rem;
+    }
+
     &::before {
         content: "";
         position: absolute;
-        top: -19rem;
+        top: -20rem;
         left: 0;
         z-index: -1;
         width: 100%;
-        height: 80rem;
+        height: 120rem;
         background: url("../src/assets/img/whyus.svg") no-repeat center top / cover;
     }
 
@@ -19,13 +23,19 @@
         margin-top: 14rem;
 
         &::before {
-            top: -17rem;
-            height: 160rem;
+            top: -18rem;
         }
     }
 
     @media (max-width: $screen-md) {
-        margin-top: 10rem;
+        margin-top: 9.6rem;
+    }
+
+
+    @media (max-width: $screen-sm) {
+        &::before {
+            height: 160rem;
+        }
     }
 
     &__title {
