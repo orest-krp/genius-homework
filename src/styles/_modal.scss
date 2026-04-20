@@ -1,0 +1,226 @@
+@use "./base" as *;
+@use "./fonts" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-text, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &--active &__overlay {
+    opacity: 1;
+  }
+
+  &__container {
+    position: relative;
+    background:
+      url('../assets/img/footer.svg') no-repeat center / cover,
+      $color-text;
+    border-radius: 3.2rem;
+    padding: 4.8rem 5.6rem;
+    max-width: 50rem;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+
+    @media (max-width: $screen-md) {
+      padding: 4.2rem 2.4rem;
+      width: 95%;
+      border-radius: 2.4rem;
+      background: $color-text;
+    }
+  }
+
+  &--active &__container {
+    transform: scale(1);
+  }
+
+  &__close {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba($color-text-secondary, 0.1);
+    }
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &__close-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $color-white;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 6.4rem;
+    font-family: $font-roboto;
+    font-weight: $weight-semibold;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 1.6rem;
+
+    @media (max-width: $screen-md) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2.2rem;
+    color: $color-white;
+    margin-bottom: 3.2rem;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (max-width: $screen-md) {
+      font-size: 1.4rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__fields {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &__input {
+      width: 100%;
+      max-width: 31rem;
+      padding: 1.6rem 2.4rem;
+      border: 1.5px solid $color-text-secondary;
+      border-radius: 3.2rem;
+      background: $color-text;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: $color-white;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &::placeholder {
+        color: $color-white;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
+      }
+
+      &.error {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+      }
+    }
+
+    &__button {
+      padding: 1.6rem 3.2rem;
+      border: none;
+      border-radius: 3.2rem;
+      background: $color-primary;
+      font-size: 1.8rem;
+      font-weight: $weight-semibold;
+      color: $color-white;
+      cursor: pointer;
+      transition: filter 0.2s ease;
+
+      &:hover {
+        filter: brightness(0.85);
+      }
+
+      &:focus {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+    }
+
+    &__policy {
+      max-width: 21.3rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      text-align: center;
+      color: $color-text-secondary;
+      margin-top: .8rem;
+
+      &__link {
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-white;
+          transition: color 0.2s ease;
+        }
+      }
+    }
+
+    .error-message {
+      color: $color-error-light;
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .success-message {
+      background: $color-success;
+      color: $color-white;
+      padding: 1.6rem 2.4rem;
+      border-radius: 3.2rem;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.6rem;
+      font-weight: $weight-semibold;
+      animation: slideDown 0.5s ease;
+    }
+  }
+}

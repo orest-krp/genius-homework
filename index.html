@@ -114,6 +114,35 @@
         </div>
       </div>
     </section>
+
+    <div class="modal" id="contact-modal" aria-hidden="true">
+      <div class="modal__overlay" id="modal-overlay"></div>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" id="modal-close" aria-label="Закрити модальне вікно">
+          <svg class="modal__close-icon" aria-hidden="true" focusable="false">
+            <use href="/src/assets/img/icons/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__content">
+          <h2 class="modal__title" id="modal-title">Замовити дзвінок</h2>
+          <p class="modal__subtitle">Запишіться <strong class="accent">безкоштовно</strong><br />
+            та отримайте подарунок</p>
+
+          <form class="modal__form" role="form">
+            <div class="modal__form__fields">
+              <input class="modal__form__input" name="name" type="text" placeholder="Ваше ім'я та прізвище">
+              <input class="modal__form__input" name="phone" type="text" placeholder="Ваш номер телефону">
+              <input class="modal__form__input" name="email" type="email" placeholder="Ваша електронна пошта">
+            </div>
+            <button class="modal__form__button" type="submit">Записатись безкоштовно</button>
+            <p class="modal__form__policy">Натискаючи на кнопку я погоджуюсь <a href="#"
+                class="modal__form__policy__link">з політикою конфіденційності</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <section class="about">
       <div class="about__container container">
         <div class="about__content">

@@ -105,9 +105,21 @@
             font-size: 1.3rem;
             font-weight: 400;
             color: $color-white;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
             &::placeholder {
                 color: $color-white;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $color-primary;
+                box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
+            }
+
+            &.error {
+                border-color: #dc3545;
+                box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
             }
         }
 

@@ -8,6 +8,11 @@ $color-shadow: #a8c6f561;
 $color-white: #ffffff;
 $color-white-transparent: rgba(255, 255, 255, 0.25);
 
+// Status colors
+$color-error: #dc3545;
+$color-error-light: #ff6b6b;
+$color-success: #28a745;
+
 $font-size-base: 62.5%;
 
 $screen-md: 768px;
@@ -63,4 +68,46 @@ h6 {
         line-height: 1.5rem;
     }
 
+}
+
+.error-message {
+    color: $color-error;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-message {
+    color: $color-success;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: $weight-semibold;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
