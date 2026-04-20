@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="arrow-left" viewBox="0 0 18 15" fill="currentColor">
+    <path d="M.293 8.071a1 1 0 0 1 0-1.414L6.657.293A1 1 0 1 1 8.07 1.707L2.414 7.364l5.657 5.657a1 1 0 1 1-1.414 1.414zm17.469.293H1v-2h16.762z"/>
+  </symbol>
+  <symbol id="arrow-right" viewBox="0 0 18 15" fill="currentColor">
+    <path d="M17.707 6.929a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l5.657-5.657-5.657-5.657a1 1 0 0 1 1.414-1.414zM.238 7.222h16.762v2H.238z"/>
+  </symbol>
+</svg>

@@ -63,12 +63,16 @@
         align-items: center;
         min-width: 42rem;
         padding: 4.8rem 5.6rem;
-        background: $color-text;
+        background:
+            url('../assets/img/footer.svg') no-repeat center / cover,
+            $color-text;
+
         border-radius: 3.2rem;
 
         @media (max-width: $screen-md) {
             padding: 4.2rem 2.4rem;
             min-width: 100%;
+            background: $color-text;
         }
 
         &__title {
@@ -119,6 +123,7 @@
 
             &:hover {
                 filter: brightness(0.85);
+                transition: filter 0.2s ease;
             }
         }
 
@@ -135,6 +140,7 @@
 
                 &:hover {
                     color: $color-white;
+                    transition: color 0.2s ease;
                 }
             }
         }

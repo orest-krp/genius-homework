@@ -1,0 +1,115 @@
+@use "./base" as *;
+
+.carousel {
+    position: relative;
+
+    &__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__track {
+        display: flex;
+        transition: transform 0.4s ease;
+        will-change: transform;
+    }
+
+    &__slides {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
+
+    &__track {
+        gap: 1.6rem
+    }
+
+    &__slide {
+        color: $color-white;
+        flex: 0 0 calc((100% - (2 * 1.6rem)) / 3);
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        height: 45.6rem;
+        padding: 3.2rem;
+        background: linear-gradient(180.05deg, rgba(1, 28, 68, 0) 48.53%, rgba(1, 28, 68, 0.725825) 84.61%, $color-text 101.39%);
+        box-sizing: border-box;
+        border-radius: 12rem 0.4rem 12rem 0.4rem;
+        text-align: center;
+
+
+        @media (max-width: $screen-md) {
+            flex: 0 0 100%;
+            height: 41.6rem;
+        }
+    }
+
+    &__slide-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        border-radius: 12rem 0.4rem 12rem 0.4rem;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    &__btn {
+        color: $color-text;
+        border: none;
+        background: none;
+        padding: 1.4rem;
+        border-radius: 50%;
+        border: 1px solid $color-text;
+        cursor: pointer;
+        transition: color 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+            color: $color-primary;
+            border-color: $color-primary;
+        }
+
+        @media (max-width: $screen-lg) {
+            display: none;
+        }
+
+    }
+
+    &__arrow {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.2rem;
+        gap: 2.4rem;
+
+        @media (max-width: $screen-md) {
+            margin-top: 1.6rem;
+            gap: 1.6rem;
+        }
+    }
+
+    &__dot {
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+        background: $color-text-secondary;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &.active {
+            background: $color-primary;
+        }
+
+        @media (max-width: $screen-md) {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+}

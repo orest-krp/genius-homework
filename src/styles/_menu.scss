@@ -5,7 +5,9 @@
     display: flex;
 }
 
-.menu-item {
+.menu-link {
+    transition: color 0.2s ease, font-weight 0.2s ease;
+
     &::after {
         display: block;
         content: attr(data-value);
@@ -15,9 +17,7 @@
         overflow: hidden;
         visibility: hidden;
     }
-}
 
-.menu-link {
     &:hover {
         color: $color-primary;
         font-weight: $weight-bold;

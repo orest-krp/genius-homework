@@ -1,16 +1,38 @@
 @use "./base" as *;
 
 .footer {
-    background: $color-text;
+    background:
+        url("../assets/img/footer.svg") no-repeat center / cover,
+        $color-text;
+
+    position: relative;
+    z-index: 1;
     color: $color-white;
     font-size: 1.6rem;
-
     padding: 5.6rem 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0rem;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("../assets/img/footer-medicine.png") no-repeat right bottom / contain;
+        background-size: 27.8rem 21.3rem;
+
+        pointer-events: none;
+    }
 
     @media (max-width: $screen-md) {
         font-size: 1.4rem;
         padding-top: 3.2rem;
         padding-bottom: 6.6rem;
+
+        &::before {
+            display: none;
+        }
     }
 
     &__nav {
@@ -35,8 +57,10 @@
     }
 
     &__menu-item:last-child {
+        display: none;
+
         @media (max-width: $screen-md) {
-            display: none;
+            display: block;
         }
     }
 
@@ -64,9 +88,9 @@
             color: $color-text-secondary;
         }
 
-        &__menu {
+        &__menu-link {
             @media (max-width: $screen-md) {
-                margin: 0;
+                display: none;
             }
         }
     }

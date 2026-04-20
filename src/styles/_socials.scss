@@ -14,9 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.2s ease;
 
     &:hover {
-        stroke: $color-primary;
         color: $color-primary;
     }
 }
