@@ -11,8 +11,8 @@ class FormValidator {
 
     const inputs = this.form.querySelectorAll('input');
     inputs.forEach(input => {
-      input.addEventListener('blur', () => this.validateField(input));
-      input.addEventListener('input', () => this.clearError(input));
+      input.addEventListener('blur', () => { this.validateField(input) });
+      input.addEventListener('input', () => { this.validateField(input) });
     });
   }
 
@@ -44,8 +44,6 @@ class FormValidator {
     const fieldName = input.name;
     let isValid = true;
     let errorMessage = '';
-
-    this.clearError(input);
 
     if (!value && this.form.classList.contains('modal__form') && !validateEmpty) {
       return true;
@@ -85,7 +83,9 @@ class FormValidator {
       }
     }
 
-    if (!isValid) {
+    if (isValid) {
+      this.clearError(input);
+    } else {
       this.showError(input, errorMessage);
     }
 
