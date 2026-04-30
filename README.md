@@ -3,7 +3,7 @@
 Short description of your project goes here.
 
 ## 🌐 Live Demo
-GitHub Pages: https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+GitHub Pages: https://orest-krp.github.io/genius-homework/
 
 ## 📦 Installation
 npm install
